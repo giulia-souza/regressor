@@ -16,7 +16,7 @@ modelo_cart = DecisionTreeRegressor(random_state=42)
 
 parametros = {'max_depth': [3, 8, None]} 
 
-# O sklearn utiliza 'neg_mean_squared_error', que devolve o erro negativo (resolveremos isso no print)
+# O sklearn utiliza 'neg_mean_squared_error', que devolve o erro negativo
 grid = GridSearchCV(modelo_cart, parametros, cv=validCruzada, scoring='neg_mean_squared_error', return_train_score=True)
 
 grid.fit(X, y)
